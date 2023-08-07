@@ -21,7 +21,7 @@ De esta forma instalara automaticamente todos los paquetes utilizados en el pack
 
 - POST formulario de /inicio
 
-```http
+```
   POST https://desusweb.com/api/mail/
 ```
 
