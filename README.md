@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Desusweb
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desusweb es una landing page que promociona el desarrollo de paginas web de una empresa en la que formo parte a tiempo parcial. El Front-end fue realizado por mi en colaboracion con otro desarrollador, realizo peticiones a una API realizada por un desarrollador Back-end del mismo grupo.
 
-## Available Scripts
+A continuacion dejare el link de la pagina web subida a Netlify:
 
-In the project directory, you can run:
+https://desusweb-19emiliano98.netlify.app
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instala el proyecto con npm
 
-### `npm test`
+```bash
+  npm install
+```
+De esta forma instalara automaticamente todos los paquetes utilizados en el package.json    
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### API Integration
 
-### `npm run build`
+- POST formulario de /inicio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+  POST https://desusweb.com/api/mail/
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|  Parameter  |   Type   |                Description             |
+| :---------- | :------- | :------------------------------------- |
+| `nombre`    | `string` | **Required**. Nombre del solicitante   |
+| `apellido`  | `string` | **Required**. Apellido del solicitante |
+| `email`     | `string` | **Required**. E-mail del solicitante   |
+| `plan`      | `string` | **Required**. plan del solicitante     |
+| `mensaje`   | `string` | mensaje del solicitante                |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Al realizar un POST a este endpoint estaremos enviando informacion para que la API envie un mail de respuesta por el plan seleccionado.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Lenguage:** Javascript
+- **Libraries:** React, MaterialUI, Sweetalert2, Formik
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Used By
 
-## Learn More
+Este proyecto es usado por:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Desusweb
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Para iniciar el proyecto utilizaremos el CLI siguiente:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+  npm start
+```
